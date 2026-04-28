@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anwar Burka Shop | Reel Selling MVP</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <aside class="sidebar" aria-label="Shop dashboard">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div>
+          <p>Anwar Burka Shop</p>
+          <span>Reel Selling MVP</span>
+        </div>
+      </div>
+
+      <nav class="tabs" aria-label="Primary">
+        <button class="tab active" data-view="home" type="button">Home</button>
+        <button class="tab" data-view="shop" type="button">Shop Reels</button>
+        <button class="tab" data-view="collections" type="button">Collections</button>
+        <button class="tab" data-view="offers" type="button">Offers</button>
+        <button class="tab" data-view="story" type="button">Story</button>
+        <button class="tab" data-view="admin" type="button">Owner Panel</button>
+        <button class="tab" data-view="orders" type="button">Orders</button>
+      </nav>
+
+      <section class="metrics" aria-label="Live metrics">
+        <div>
+          <strong id="metricViews">248</strong>
+          <span>reel views today</span>
+        </div>
+        <div>
+          <strong id="metricLikes">0</strong>
+          <span>reel likes</span>
+        </div>
+        <div>
+          <strong id="metricOrders">0</strong>
+          <span>orders captured</span>
+        </div>
+        <div>
+          <strong>6-8 wk</strong>
+          <span>full build timeline</span>
+        </div>
+      </section>
+
+      <button class="whatsapp-btn" id="ownerWhatsApp" type="button">
+        <span>WhatsApp Shop</span>
+      </button>
+    </aside>
+
+    <section class="home-page view active" id="homeView" aria-label="Customer home">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">Reel-first modest fashion</span>
+          <h1>Anwar Burka Shop</h1>
+          <p>Discover premium abayas through fast reels, fresh collections, festive offers, and simple WhatsApp-friendly ordering.</p>
+          <div class="hero-actions">
+            <button class="primary" data-jump="shop" type="button">Watch Reels</button>
+            <button class="ghost" data-jump="collections" type="button">Explore Collections</button>
+          </div>
+        </div>
+        <div class="hero-reel-stack">
+          <article class="mini-video tall" style="background-image:url('assets/abaya-black.png')">
+            <span>Trending</span>
+            <strong>Noor Black</strong>
+          </article>
+          <article class="mini-video" style="background-image:url('assets/abaya-navy.png')">
+            <span>New Drop</span>
+            <strong>Navy Silver</strong>
+          </article>
+        </div>
+      </div>
+
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Swipe-worthy selling</span>
+          <h2>Everything a customer wants to tap.</h2>
+        </div>
+        <button class="ghost" data-jump="shop" type="button">Start Shopping</button>
+      </div>
+
+      <div class="feature-strip">
+        <div><strong>Vertical reels</strong><span>Mobile-first discovery</span></div>
+        <div><strong>One-tap order</strong><span>No heavy checkout</span></div>
+        <div><strong>WhatsApp ready</strong><span>Manual follow-up</span></div>
+        <div><strong>Admin control</strong><span>Products and orders</span></div>
+      </div>
+
+      <div class="carousel-wrap">
+        <button class="carousel-btn" data-carousel="homeCarousel" data-dir="-1" type="button">‹</button>
+        <div class="horizontal-carousel" id="homeCarousel"></div>
+        <button class="carousel-btn" data-carousel="homeCarousel" data-dir="1" type="button">›</button>
+      </div>
+    </section>
+
+    <section class="phone-stage view" id="shopView" aria-label="Customer reel shopping">
+      <div class="phone">
+        <header class="phone-top">
+          <div>
+            <span class="eyebrow">New arrivals</span>
+            <h1>Shop by reels</h1>
+          </div>
+          <button class="icon-btn" id="openCart" type="button" aria-label="View order bag">
+            <span id="bagCount">0</span>
+          </button>
+        </header>
+
+        <div class="reel-feed" id="reelFeed" aria-live="polite"></div>
+      </div>
+      <div class="pitch-panel">
+        <span class="eyebrow">Client-ready demo</span>
+        <h2>From reel to order in under 30 seconds.</h2>
+        <p>Customers browse vertically, tap a product, confirm size and contact details, then the shop receives an order for manual delivery or WhatsApp follow-up.</p>
+        <div class="flow">
+          <span>Watch</span>
+          <span>Tap</span>
+          <span>Order</span>
+          <span>Fulfill</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace view" id="collectionsView" aria-label="Collections">
+      <div class="workspace-head">
+        <div>
+          <span class="eyebrow">Collections</span>
+          <h2>More ways to browse than one endless feed.</h2>
+        </div>
+        <button class="primary" data-jump="shop" type="button">Open Reels</button>
+      </div>
+
+      <div class="collection-grid">
+        <article class="collection-banner" style="background-image:url('assets/abaya-black.png')">
+          <div>
+            <span class="eyebrow">Daily elegance</span>
+            <h3>Black Essentials</h3>
+            <p>Clean, premium, high-conversion everyday abayas.</p>
+          </div>
+        </article>
+        <article class="collection-banner" style="background-image:url('assets/abaya-navy.png')">
+          <div>
+            <span class="eyebrow">Occasion wear</span>
+            <h3>Silver Detail</h3>
+            <p>Event-ready styles for customers who want a richer look.</p>
+          </div>
+        </article>
+        <article class="collection-banner" style="background-image:url('assets/abaya-cream.png')">
+          <div>
+            <span class="eyebrow">Festive picks</span>
+            <h3>Cream & Gold</h3>
+            <p>Premium festive pieces built for reels and WhatsApp sharing.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="section-head compact">
+        <div>
+          <span class="eyebrow">Product carousel</span>
+          <h2>Tap any card to order.</h2>
+        </div>
+      </div>
+      <div class="carousel-wrap">
+        <button class="carousel-btn" data-carousel="collectionCarousel" data-dir="-1" type="button">‹</button>
+        <div class="horizontal-carousel product-carousel" id="collectionCarousel"></div>
+        <button class="carousel-btn" data-carousel="collectionCarousel" data-dir="1" type="button">›</button>
+      </div>
+    </section>
+
+    <section class="workspace view" id="offersView" aria-label="Offers">
+      <div class="workspace-head">
+        <div>
+          <span class="eyebrow">Campaign page</span>
+          <h2>Offer blocks to push urgency during festivals and weekends.</h2>
+        </div>
+      </div>
+      <div class="offer-grid">
+        <article class="offer-card hot">
+          <span class="eyebrow">Today only</span>
+          <h3>Buy 2, save ₹400</h3>
+          <p>Perfect for family orders and WhatsApp broadcast campaigns.</p>
+          <button class="primary" data-jump="shop" type="button">Shop Offer</button>
+        </article>
+        <article class="offer-card">
+          <span class="eyebrow">New customer</span>
+          <h3>Free delivery in city</h3>
+          <p>Great for converting Instagram visitors into first orders.</p>
+          <button class="ghost" data-jump="shop" type="button">View Reels</button>
+        </article>
+        <article class="offer-card dark">
+          <span class="eyebrow">Premium drop</span>
+          <h3>Festive collection live</h3>
+          <p>Use this section for seasonal launches and limited stock.</p>
+          <button class="primary" data-jump="collections" type="button">See Collection</button>
+        </article>
+      </div>
+
+      <div class="video-row">
+        <article class="mini-video" style="background-image:url('assets/abaya-black.png')"><span>Reel ad</span><strong>10 sec hook</strong></article>
+        <article class="mini-video" style="background-image:url('assets/abaya-navy.png')"><span>Reel ad</span><strong>Fabric close-up</strong></article>
+        <article class="mini-video" style="background-image:url('assets/abaya-cream.png')"><span>Reel ad</span><strong>Festive styling</strong></article>
+      </div>
+    </section>
+
+    <section class="workspace view" id="storyView" aria-label="Shop story">
+      <div class="story-layout">
+        <div>
+          <span class="eyebrow">Why this MVP sells</span>
+          <h2>It keeps the business simple while making discovery exciting.</h2>
+          <p>Instead of building an expensive mobile app first, the shop launches a fast web experience customers can open from Instagram, WhatsApp, or a QR code. Reels create attention, product pages create clarity, and WhatsApp/manual orders keep operations realistic for phase one.</p>
+          <div class="timeline">
+            <div><strong>Phase 1</strong><span>Reels, products, orders, WhatsApp</span></div>
+            <div><strong>Phase 2</strong><span>Payments, login, tracking</span></div>
+            <div><strong>Phase 3</strong><span>Mobile app, analytics, automation</span></div>
+          </div>
+        </div>
+        <div class="story-card">
+          <strong>Client promise</strong>
+          <p>Launch fast, test demand, grow only after orders prove the model.</p>
+          <button class="primary" data-jump="admin" type="button">Show Owner Control</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace view" id="adminView" aria-label="Admin panel">
+      <div class="workspace-head">
+        <div>
+          <span class="eyebrow">Shop owner panel</span>
+          <h2>Upload reels, manage products, keep selling simple.</h2>
+        </div>
+        <button class="primary" id="seedOrder" type="button">Add sample order</button>
+      </div>
+
+      <div class="admin-grid">
+        <form class="panel" id="productForm">
+          <h3>Add / Update Product</h3>
+          <label>Product name <input name="name" required value="Zaina Premium Abaya"></label>
+          <label>Price <input name="price" required value="2499"></label>
+          <label>Description <textarea name="description" required>Premium modest wear with elegant embroidery and breathable fabric.</textarea></label>
+          <label>Reel asset
+            <select name="image">
+              <option value="assets/abaya-black.png">Black embroidered reel</option>
+              <option value="assets/abaya-navy.png">Navy silver reel</option>
+              <option value="assets/abaya-cream.png">Cream gold reel</option>
+            </select>
+          </label>
+          <button class="primary" type="submit">Publish Reel Product</button>
+        </form>
+
+        <div class="panel">
+          <h3>Products Live</h3>
+          <div class="product-list" id="productList"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="workspace view" id="ordersView" aria-label="Orders dashboard">
+      <div class="workspace-head">
+        <div>
+          <span class="eyebrow">Order handling</span>
+          <h2>Manual fulfillment, structured dashboard.</h2>
+        </div>
+        <button class="ghost" id="clearOrders" type="button">Clear demo orders</button>
+      </div>
+      <div class="panel order-panel">
+        <div class="order-toolbar">
+          <strong id="orderSummary">No orders yet</strong>
+          <span>WhatsApp or offline delivery ready</span>
+        </div>
+        <div class="orders" id="orders"></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="modal" id="productModal">
+    <form method="dialog" class="modal-card">
+      <button class="close" value="cancel" aria-label="Close">×</button>
+      <img id="modalImage" alt="">
+      <div class="modal-body">
+        <span class="eyebrow" id="modalCode"></span>
+        <h2 id="modalName"></h2>
+        <p id="modalDesc"></p>
+        <strong id="modalPrice"></strong>
+        <div class="sizes" id="sizePicker" aria-label="Size selector"></div>
+        <label>Your name <input id="customerName" autocomplete="name" placeholder="Customer name"></label>
+        <label>Mobile number <input id="customerPhone" inputmode="tel" placeholder="+91 98765 43210"></label>
+        <label>Address / note <textarea id="customerNote" placeholder="Area, preferred time, color request"></textarea></label>
+        <button class="primary" id="placeOrder" value="default" type="button">Place Order</button>
+        <button class="whatsapp-line" id="orderWhatsApp" value="default" type="button">Send on WhatsApp</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
